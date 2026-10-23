@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="box">
+    <h2>Login</h2>
+    <p class="hint">Username: admin | Password: Admin@123</p>
+
+    <label>Username</label>
+    <input id="username" type="text">
+    <p class="error" id="usernameError"></p>
+
+    <label>Password</label>
+    <input id="password" type="password">
+    <p class="error" id="passwordError"></p>
+
+    <label><input id="remember" type="checkbox"> Remember username</label>
+    <p class="error" id="loginError"></p>
+
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <!-- DASHBOARD PAGE -->
+  <div id="dashboardPage" class="box hidden">
+    <div class="top">
+      <h2 id="welcome"></h2>
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+    <h3>Users (from public API)</h3>
+    <input id="search" type="text" placeholder="Search by name">
+    <button id="reloadBtn">Reload from API</button>
+
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Email</th><th>Action</th></tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <p id="status"></p>
+
+    <h3>Add user</h3>
+    <input id="newName" type="text" placeholder="Name">
+    <p class="error" id="nameError"></p>
+    <input id="newEmail" type="text" placeholder="Email">
+    <p class="error" id="emailError"></p>
+    <button id="addBtn">Add</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
