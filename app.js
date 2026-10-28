@@ -40,7 +40,7 @@ async function loadUsers(force) {
   const saved = localStorage.getItem("users");
   try {
     if (saved && !force) users = JSON.parse(saved);  // use saved data
-    else {                                           // GET from the API
+    else {                                           // GET from API
       $("status").textContent = "Loading from API...";
       const data = await (await fetch(USERS_API)).json();
       const fresh = data.results.map((u, i) => ({    // reshape API data into { id, name, email }
